@@ -28,6 +28,9 @@
     <modules>
         <module>hh-register</module>
         <module>hh-service-admin</module>
+		<module>hh-service-feign</module>
+		<module>hh-service-zuul</module>
+		<module>hh-service-ribbon</module>
     </modules>
 
 	<dependencies>
