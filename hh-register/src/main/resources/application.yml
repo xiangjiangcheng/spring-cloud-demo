@@ -1,0 +1,16 @@
+# Eureka 默认端口是8761
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false  # 表明自己是一个eureka server
+    fetchRegistry: false  # 表明自己是一个eureka server
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+spring:
+  application:
+    name: eurka-server
