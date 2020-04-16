@@ -15,12 +15,22 @@ public class AdminController {
     @GetMapping("/hi")
     public String test() {
         log.info("Request hi ......");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "hi,  i am is admin.";
     }
 
     @PostMapping("/hi")
     public String test2(@RequestBody @Valid AdminRequest request) {
         log.info("Request hi2 ......");
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "hi,  i am is admin2.";
     }
 
